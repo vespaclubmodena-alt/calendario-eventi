@@ -1,44 +1,112 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Iscriviti al calendario eventi</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vespa Club Modena 1949 - Eventi 2027</title>
 <style>
-:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#15233b;background:#f4f7fb}*{box-sizing:border-box}body{margin:0;padding:32px 16px}.panel{max-width:620px;margin:5vh auto;background:white;border-radius:20px;padding:clamp(24px,5vw,48px);box-shadow:0 12px 40px #172c4915}h1{font-size:clamp(27px,5vw,38px);line-height:1.12;margin:0 0 14px}p{line-height:1.6;color:#526178}.option{display:block;text-decoration:none;color:#15233b;border:1px solid #dce4ed;border-radius:12px;padding:17px 20px;margin:14px 0;font-weight:650}.option:hover,.option:focus{background:#edf4ff;border-color:#648cdb}.hint{font-size:14px}.steps{background:#f4f7fb;border-radius:12px;padding:16px 20px;font-size:14px;line-height:1.65}footer{font-size:12px;color:#66758a;margin-top:26px}
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #172b4d;
+  margin: 0;
+  padding: 16px;
+}
+main {
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  padding: 18px;
+  border-radius: 16px;
+}
+h1, p { text-align: center; }
+nav { display: flex; gap: 10px; margin: 20px 0; }
+button {
+  flex: 1;
+  padding: 16px;
+  border: 0;
+  border-radius: 10px;
+  background: #e5ebf3;
+  font-size: 16px;
+  cursor: pointer;
+}
+button.active { background: #172b4d; color: white; }
+iframe { width: 100%; height: 650px; border: 0; }
+a { color: #172b4d; }
 </style>
 </head>
-<body><main class="panel">
-<h1>Non perdere i prossimi eventi</h1>
-<p>Iscriviti al calendario pubblico: nuovi appuntamenti e variazioni saranno sincronizzati automaticamente secondo i tempi della tua applicazione.</p>
-<a class="option" href="https://calendar.google.com/calendar/render?cid=2f2bc429c287adfd07dd6ba1e1df5735fa0c84b0376926243776fddb9326095d%40group.calendar.google.com" target="_blank" rel="noopener">Google Calendar &rarr;</a>
-<a class="option" href="webcal://calendar.google.com/calendar/ical/2f2bc429c287adfd07dd6ba1e1df5735fa0c84b0376926243776fddb9326095d%40group.calendar.google.com/public/basic.ics">Apple Calendar &rarr;</a>
-<a class="option" href="https://outlook.live.com/calendar/0/addcalendar" target="_blank" rel="noopener">Outlook &rarr;</a>
-<div class="steps"><strong>Per Outlook</strong><<!doctype html>
-<html lang="it">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Iscriviti al calendario eventi</title>
-<style>
-:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#15233b;background:#f4f7fb}*{box-sizing:border-box}body{margin:0;padding:32px 16px}.panel{max-width:620px;margin:5vh auto;background:white;border-radius:20px;padding:clamp(24px,5vw,48px);box-shadow:0 12px 40px #172c4915}h1{font-size:clamp(27px,5vw,38px);line-height:1.12;margin:0 0 14px}p{line-height:1.6;color:#526178}.option{display:block;text-decoration:none;color:#15233b;border:1px solid #dce4ed;border-radius:12px;padding:17px 20px;margin:14px 0;font-weight:650}.option:hover,.option:focus{background:#edf4ff;border-color:#648cdb}.hint{font-size:14px}.steps{background:#f4f7fb;border-radius:12px;padding:16px 20px;font-size:14px;line-height:1.65}footer{font-size:12px;color:#66758a;margin-top:26px}
-</style>
-</head>
-<body><main class="panel">
-<h1>Non perdere i prossimi eventi</h1>
-<p>Iscriviti al calendario pubblico: nuovi appuntamenti e variazioni saranno sincronizzati automaticamente secondo i tempi della tua applicazione.</p>
-<a class="option" href="https://calendar.google.com/calendar/render?cid=2f2bc429c287adfd07dd6ba1e1df5735fa0c84b0376926243776fddb9326095d%40group.calendar.google.com" target="_blank" rel="noopener">Google Calendar &rarr;</a>
-<a class="option" href="webcal://calendar.google.com/calendar/ical/2f2bc429c287adfd07dd6ba1e1df5735fa0c84b0376926243776fddb9326095d%40group.calendar.google.com/public/basic.ics">Apple Calendar &rarr;</a>
-<a class="option" href="https://outlook.live.com/calendar/0/addcalendar" target="_blank" rel="noopener">Outlook &rarr;</a>
-<div class="steps"><strong>Per Outlook</strong><br>1. Copia il link iCal qui sotto.<br>2. Apri Outlook e scegli <em>Aggiungi calendario</em> &rarr; <em>Sottoscrivi dal Web</em>.<br>3. Incolla il link e conferma.<br><button id="copy" type="button" style="margin-top:12px;padding:10px 16px;border-radius:8px;border:1px solid #b7c8db;background:white;cursor:pointer">Copia indirizzo iCal</button><div id="copyStatus" role="status" aria-live="polite"></div></div>
-<p class="hint">Per ricevere gli aggiornamenti, scegli l'iscrizione o la sottoscrizione al calendario, non l'importazione una tantum del file .ics.</p>
-<footer>Calendario pubblico di sola lettura. Gli aggiornamenti possono richiedere tempo per comparire.</footer>
-</main><script>
-const ical='https://calendar.google.com/calendar/ical/2f2bc429c287adfd07dd6ba1e1df5735fa0c84b0376926243776fddb9326095d%40group.calendar.google.com/public/basic.ics';
-document.getElementById('copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(ical);document.getElementById('copyStatus').textContent='Link copiato.'}catch(e){const a=document.createElement('textarea');a.value=ical;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();document.getElementById('copyStatus').textContent='Link copiato: incollalo in Outlook.'}});
-</script></body></html>
-br>1. Copia il link iCal qui sotto.<br>2. Apri Outlook e scegli <em>Aggiungi calendario</em> &rarr; <em>Sottoscrivi dal Web</em>.<br>3. Incolla il link e conferma.<br><button id="copy" type="button" style="margin-top:12px;padding:10px 16px;border-radius:8px;border:1px solid #b7c8db;background:white;cursor:pointer">Copia indirizzo iCal</button><div id="copyStatus" role="status" aria-live="polite"></div></div>
-<p class="hint">Per ricevere gli aggiornamenti, scegli l'iscrizione o la sottoscrizione al calendario, non l'importazione una tantum del file .ics.</p>
-<footer>Calendario pubblico di sola lettura. Gli aggiornamenti possono richiedere tempo per comparire.</footer>
-</main><script>
-const ical='https://calendar.google.com/calendar/ical/2f2bc429c287adfd07dd6ba1e1df5735fa0c84b0376926243776fddb9326095d%40group.calendar.google.com/public/basic.ics';
-document.getElementById('copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(ical);document.getElementById('copyStatus').textContent='Link copiato.'}catch(e){const a=document.createElement('textarea');a.value=ical;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();document.getElementById('copyStatus').textContent='Link copiato: incollalo in Outlook.'}});
-</script></body></html>
+<body>
+<main>
+<h1>Vespa Club Modena 1949</h1>
+<p>Calendario eventi 2027</p>
+
+<nav>
+<button id="listBtn" class="active" onclick="show('AGENDA')">
+Elenco eventi
+</button>
+<button id="monthBtn" onclick="show('MONTH')">
+Vista mensile
+</button>
+</nav>
+
+<iframe id="calendar" title="Calendario eventi"></iframe>
+
+<h2>Ricevi gli aggiornamenti</h2>
+<p>
+<a id="google" target="_blank" rel="noopener">
+Aggiungi a Google Calendar
+</a>
+</p>
+<p>
+<a id="apple">
+Iscriviti con Apple Calendar
+</a>
+</p>
+<p>
+Per Outlook, usa la funzione
+"Aggiungi calendario → Sottoscrivi dal Web"
+e inserisci l'indirizzo pubblico iCal.
+</p>
+</main>
+
+<script>
+const id =
+"2f2bc429c287adfd07dd6ba1e1df5735fa0c84b0376926243776fddb9326095d@group.calendar.google.com";
+
+const ical =
+"https://calendar.google.com/calendar/ical/" +
+encodeURIComponent(id) + "/public/basic.ics";
+
+document.getElementById("google").href =
+"https://calendar.google.com/calendar/render?cid=" +
+encodeURIComponent(id);
+
+document.getElementById("apple").href =
+"webcal://calendar.google.com/calendar/ical/" +
+encodeURIComponent(id) + "/public/basic.ics";
+
+function show(mode) {
+  const url = new URL(
+    "https://calendar.google.com/calendar/embed"
+  );
+  url.searchParams.set("src", id);
+  url.searchParams.set("ctz", "Europe/Rome");
+  url.searchParams.set("mode", mode);
+  url.searchParams.set("showTitle", "0");
+  url.searchParams.set("showCalendars", "0");
+  url.searchParams.set("showTabs", "0");
+
+  document.getElementById("calendar").src = url.href;
+  document.getElementById("listBtn").classList.toggle(
+    "active", mode === "AGENDA"
+  );
+  document.getElementById("monthBtn").classList.toggle(
+    "active", mode === "MONTH"
+  );
+}
+
+show("AGENDA");
+</script>
+</body>
+</html>
